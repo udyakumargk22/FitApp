@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mouritech.healthapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".fitbitauth.FitbitAuthApplication"
+        >
+        <activity android:name=".home.StravaActivity"></activity>
+        <activity android:name=".home.GoogleFitActivity" />
+        <activity android:name=".home.FitbitActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".fitbitauth.LoginActivity" />
+
+        <meta-data
+            android:name="com.fitbit.sampleandroidoauth2.CLIENT_ID"
+            android:value="22C6FZ" />
+        <meta-data
+            android:name="com.fitbit.sampleandroidoauth2.REDIRECT_URL"
+            android:value="https://www.google.com/" />
+    </application>
+
+</manifest>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * Purpose  activity_google_fit.xml
+  ~
+  ~ * Copyright  2021  MouriTech
+  ~
+  ~ * @author  udayv
+  ~
+  ~ * Created on Apr 05, 2021
+  ~
+  ~ * Modified on Apr 05, 2021
+  ~ *
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".home.GoogleFitActivity">
+
+
+        <Button
+            android:text="google fit login"
+            android:id="@+id/google_fit_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="google data"
+            android:id="@+id/google_fit_data_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <Button
+            android:text="google fit Logout"
+            android:id="@+id/google_fit_logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+</layout>

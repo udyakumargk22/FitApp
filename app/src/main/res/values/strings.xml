@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HealthApplication</string>
+    <string name="fitbit_login">Fitbit Login</string>
+    <string name="fitbit_data">Fitbit Data</string>
+    <string name="fitbit_logout">Fitbit Logout</string>
+    <string name="strava_login">Strava Login</string>
+    <string name="strava_data">Strava Data</string>
+    <string name="strava_logout">Strava Logout</string>
+    <string name="google_fit_logout">Google Fit Logout</string>
+    <string name="google_fit_data">Google Fit Data</string>
+    <string name="google_fit_login">Google Fit Login</string>
+</resources>

@@ -20,7 +20,6 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -54,8 +53,8 @@ public class RetrofitClient {
     }
     public static ApiInterface getClient(String token){
 
-        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+//        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         try {
             okHttpClient = new OkHttpClient().newBuilder().addInterceptor(new Interceptor() {
@@ -69,8 +68,7 @@ public class RetrofitClient {
             })
                     .readTimeout(1, TimeUnit.MINUTES)
                     .connectTimeout(1, TimeUnit.MINUTES)
-//                    .addInterceptor(new HttpLoggingInterceptor())
-                    .addInterceptor(logging)
+//                    .addInterceptor(logging)
                     .build();
 
 
@@ -89,15 +87,14 @@ public class RetrofitClient {
     }
     public static ApiInterface getClientStrava(){
 
-        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+//        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         try {
                 okHttpClient = new OkHttpClient().newBuilder()
                     .readTimeout(1, TimeUnit.MINUTES)
                     .connectTimeout(1, TimeUnit.MINUTES)
-                        .addInterceptor(new HttpLoggingInterceptor())
-//                    .addInterceptor(new HttpLoggingInterceptor())
+//                        .addInterceptor(new HttpLoggingInterceptor())
                     .build();
 
 
@@ -116,8 +113,8 @@ public class RetrofitClient {
     }
     public static ApiInterface getClientStrava(String token){
 
-        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+//        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         try {
             okHttpClient = new OkHttpClient().newBuilder().addInterceptor(new Interceptor() {
@@ -131,8 +128,7 @@ public class RetrofitClient {
             })
                     .readTimeout(1, TimeUnit.MINUTES)
                     .connectTimeout(1, TimeUnit.MINUTES)
-//                    .addInterceptor(new HttpLoggingInterceptor())
-                    .addInterceptor(logging)
+//                    .addInterceptor(logging)
                     .build();
 
 

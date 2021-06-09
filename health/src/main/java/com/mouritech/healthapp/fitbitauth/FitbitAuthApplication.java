@@ -81,8 +81,9 @@ public class FitbitAuthApplication extends Application {
      */
     @Override
     public void onCreate() {
-        super.onCreate();
         MultiDex.install(this);
+        super.onCreate();
+
         AuthenticationManager.configure(this, generateAuthenticationConfiguration(this, FitbitActivity.class));
     }
 }

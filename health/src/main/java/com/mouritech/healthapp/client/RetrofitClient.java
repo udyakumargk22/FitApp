@@ -16,8 +16,12 @@ package com.mouritech.healthapp.client;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+//import okhttp3.Interceptor;
+//import okhttp3.OkHttpClient;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+//import okhttp3.Request;
+//import okhttp3.Response;
 import okhttp3.Request;
 import okhttp3.Response;
 import retrofit2.Retrofit;
@@ -59,7 +63,7 @@ public class RetrofitClient {
         try {
             okHttpClient = new OkHttpClient().newBuilder().addInterceptor(new Interceptor() {
                 @Override
-                public Response intercept(Chain chain) throws IOException {
+                public okhttp3.Response intercept(Chain chain) throws IOException {
                     Request newRequest  = chain.request().newBuilder()
                             .addHeader("Authorization", "Bearer " + token)
                             .build();

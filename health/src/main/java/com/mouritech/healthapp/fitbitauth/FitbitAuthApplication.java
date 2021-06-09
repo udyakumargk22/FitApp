@@ -8,6 +8,8 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
+import androidx.multidex.MultiDex;
+
 import com.mouritech.healthapp.home.FitbitActivity;
 
 
@@ -41,6 +43,8 @@ public class FitbitAuthApplication extends Application {
      * requested scopes, and  where to return after login
      */
     public static AuthenticationConfiguration generateAuthenticationConfiguration(Context context, Class<? extends Activity> mainActivityClass) {
+
+
 
         try {
             ApplicationInfo ai = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
@@ -78,6 +82,7 @@ public class FitbitAuthApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MultiDex.install(this);
         AuthenticationManager.configure(this, generateAuthenticationConfiguration(this, FitbitActivity.class));
     }
 }

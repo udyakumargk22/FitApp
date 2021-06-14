@@ -9,7 +9,11 @@ group='com.github.anupamchugh'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
     defaultConfig {
 //        applicationId "com.mouritech.healthapp"
         minSdkVersion 21

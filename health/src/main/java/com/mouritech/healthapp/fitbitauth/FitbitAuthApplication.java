@@ -9,7 +9,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 
-import androidx.multidex.MultiDex;
 
 import com.mouritech.healthapp.home.FitbitActivity;
 
@@ -87,9 +86,9 @@ public class FitbitAuthApplication extends Application {
         AuthenticationManager.configure(this, generateAuthenticationConfiguration(this, FitbitActivity.class));
     }
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        MultiDex.install(this);
-    }
+//    @Override
+//    protected void attachBaseContext(Context base) {
+//        super.attachBaseContext(base);
+//        MultiDex.install(this);
+//    }
 }

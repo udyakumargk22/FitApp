@@ -72,6 +72,11 @@ dependencies {
 //    implementation 'androidx.multidex:multidex:2.0.1'
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'com.google.android.gms:play-services-auth:19.0.0'
+    }
+}
 project.afterEvaluate {
     publishing {
         publications {

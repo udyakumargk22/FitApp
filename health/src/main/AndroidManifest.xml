@@ -20,6 +20,7 @@
         <meta-data
             android:name="com.fitbit.sampleandroidoauth2.REDIRECT_URL"
             android:value="https://www.google.com/" />
+
     </application>
 
 </manifest>

@@ -68,7 +68,26 @@ dependencies {
 
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 
-        api 'com.google.android.gms:play-services-auth:19.0.0'
+    api 'com.google.android.gms:play-services-auth:19.0.0'
+
+//    implementation('com.google.android.gms:play-services-auth:19.0.0') { transitive = true }
 
 //    implementation 'androidx.multidex:multidex:2.0.1'
 }
+
+
+//task to delete the old jar
+task deleteOldJar(type: Delete) {
+    delete 'release/AndroidPlugin.jar'
+}
+
+//task to export contents as jar
+task exportJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('release/')
+    include('classes.jar')
+    ///Rename the jar
+    rename('classes.jar', 'AppInvite.jar')
+}
+
+exportJar.dependsOn(deleteOldJar, build)
